@@ -12,7 +12,7 @@ import githubLogo from '../assets/github-logo.svg';
 <Layout title="Welcome to Astro.">
     <div class="relative h-screen w-screen">
         <Image src={backgroundImage} alt="background of me" class="bg-cover h-full w-full object-cover" />
-        <div class="absolute top-0 left-0 ml-24 mt-28 w-1/2 text-background text-lg">
+        <div class="absolute top-0 left-0 ml-20 mt-28 w-1/2 text-background text-lg">
             <div class="text-white text-6xl font-bold mb-10">
                 Hi, I'm Miki Pokryvailo
             </div>
@@ -27,8 +27,12 @@ import githubLogo from '../assets/github-logo.svg';
             </div>
         </div>
         <div class="absolute bottom-0 right-0 mr-5 mb-5 flex space-x-4">
-            <Image class="max-w-10 max-h-10" src={linkedInLogo} alt="linkedin logo"></Image>
-            <Image class="max-w-10 max-h-10" src={githubLogo} alt="linkedin logo"></Image>
+            <a href="https://linkedin.com/in/miki-pokryvailo/" target="_blank" class="rounded-md clickable-image">
+                <Image class="max-w-10 max-h-10" src={linkedInLogo} alt="linkedin logo"></Image>
+            </a>
+            <a href="https://github.com/mpokryva" target="_blank" class="rounded-full clickable-image">
+                <Image class="max-w-10 max-h-10" src={githubLogo} alt="linkedin logo"></Image>
+            </a>
         </div>
     </div>
 </Layout>
@@ -37,6 +41,15 @@ import githubLogo from '../assets/github-logo.svg';
     body {
         font-family: 'Lora', sans-serif;
         -webkit-font-smoothing: antialiased;
+    }
+
+    a.clickable-image {
+        padding: 5px; /* Padding to ensure background is visible */
+    }
+
+    a.clickable-image:hover {
+        background-color: rgba(211, 211, 211, 0.3); /* Light gray background with slight transparency */
+        display: inline-block;
     }
     .text-background {
         color: #ffffff; /* White color for better contrast */
