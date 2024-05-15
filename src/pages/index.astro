@@ -1,7 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
-import backgroundImage from '../assets/background-better-contrast.webp';
+import backgroundImage from '../assets/background.webp';
+import backgroundImageMobile from '../assets/background-mobile.png';
 import linkedInLogo from '../assets/linkedin-logo.png';
 import githubLogo from '../assets/github-logo.svg';
 ---
@@ -11,7 +12,10 @@ import githubLogo from '../assets/github-logo.svg';
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 <Layout title="Welcome to Astro.">
     <div class="relative h-screen w-screen">
-        <Image src={backgroundImage} alt="background of me" class="bg-cover h-full w-full object-cover" />
+        <img src={backgroundImage.src}
+             sizes="(max-width: 600px) 480px, 800px"
+             srcset={`${backgroundImageMobile.src} 1133w, ${backgroundImage.src} 1792w`}
+             alt="background of me" class="bg-cover h-full w-full object-cover" />
         <div class="absolute top-0 left-0 ml-20 mt-36 w-1/2 text-background text-lg">
             <div class="text-6xl font-bold mb-10">
                 Hi, I'm Miki Pokryvailo
@@ -51,11 +55,13 @@ import githubLogo from '../assets/github-logo.svg';
         background-color: rgba(211, 211, 211, 0.3); /* Light gray background with slight transparency */
         display: inline-block;
     }
+
     .text-background {
         color: #E0FFFF;
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for readability */
         //letter-spacing: 0.5px; /* Slight letter spacing for readability */
     }
+
     main {
         margin: auto;
         padding: 1rem;
@@ -64,6 +70,7 @@ import githubLogo from '../assets/github-logo.svg';
         font-size: 20px;
         line-height: 1.6;
     }
+
     .lato-thin {
         font-family: "Lato", sans-serif;
         font-weight: 100;
@@ -124,4 +131,3 @@ import githubLogo from '../assets/github-logo.svg';
         font-style: italic;
     }
 </style>
-
