@@ -8,15 +8,15 @@ import githubLogo from '../assets/github-logo.svg';
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 <Layout title="Welcome to Astro.">
     <div class="relative h-screen w-screen">
         <Image src={backgroundImage} alt="background of me" class="bg-cover h-full w-full object-cover" />
-        <div class="absolute top-0 left-0 ml-12 mt-28 w-1/2">
-            <div class="text-white text-6xl font-bold">
+        <div class="absolute top-0 left-0 ml-24 mt-28 w-1/2 text-background text-lg">
+            <div class="text-white text-6xl font-bold mb-10">
                 Hi, I'm Miki Pokryvailo
             </div>
-            <div class="text-white mt-4">
+            <div class="text-white mt-4 w-3/4">
                 I’m a software engineer based in NYC. I mainly work on backend/infra, and I’m happiest when working on early-stage, ambiguous problems. I like figuring things out.
                 <br /><br />
                 I was the first engineer at Nile, worked at Madhive, and Confluent.
@@ -35,7 +35,13 @@ import githubLogo from '../assets/github-logo.svg';
 
 <style>
     body {
-        font-family: 'Lato', sans-serif;
+        font-family: 'Lora', sans-serif;
+        -webkit-font-smoothing: antialiased;
+    }
+    .text-background {
+        color: #ffffff; /* White color for better contrast */
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for readability */
+        letter-spacing: 0.5px; /* Slight letter spacing for readability */
     }
     main {
         margin: auto;
