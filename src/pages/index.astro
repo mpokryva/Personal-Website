@@ -9,7 +9,7 @@ import githubLogo from '../assets/github-logo.svg';
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <Layout title="Welcome to Astro.">
     <div class="relative h-screen w-screen container image-container">
         <img src={backgroundImage.src}
@@ -19,7 +19,7 @@ import githubLogo from '../assets/github-logo.svg';
         <div class="scrim"></div>
         <div class="absolute top-0 max-w-screen-md left-0 px-4 py-28 md:px-28 md:py-32 w-full about-me-text">
             <div class="">
-                <div class="text-5xl font-black mb-14">
+                <div class="text-7xl font-black mb-14 text-my-name">
                     Hi, I'm Miki Pokryvailo
                 </div>
                 <div class="mt-4 text-base md:text-lg font-light">
@@ -44,6 +44,8 @@ import githubLogo from '../assets/github-logo.svg';
     </div>
 </Layout>
 
+<!-- TODO: get rid of horizontal scrim for mobile — maybe add vertical scrim -->
+
 <style>
     body {
         //font-family: 'Lora', serif;
@@ -55,6 +57,10 @@ import githubLogo from '../assets/github-logo.svg';
         //-webkit-text-stroke: 1px black;
         //paint-order: stroke fill;
         text-rendering: optimizeLegibility;
+    }
+
+    .text-my-name {
+        font-family: 'Lato', sans-serif;
     }
 
     .image-container {
