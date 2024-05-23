@@ -4,7 +4,6 @@ import { Image } from 'astro:assets';
 import backgroundImageDesktop from '../assets/background-desktop.png';
 import backgroundImageMobile from '../assets/background-mobile-upscaled.png'
 import backgroundImageTablet from '../assets/background-tablet.png'
-import backgroundImageTablet2 from '../assets/background-tablet-less-bottom.png'
 import linkedInLogo from '../assets/linkedin-logo.png';
 import githubLogo from '../assets/github-logo.svg';
 ---
@@ -23,29 +22,28 @@ TODO:
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <Layout title="Welcome to Astro.">
         <picture class="">
-            <!--<source media="(orientation: portrait)" srcset={backgroundImageMobile.src}>-->
             <source media="(max-width: 480px)" srcset={backgroundImageMobile.src}>
             <source media="(min-width: 601px) and (max-width: 1024px)" srcset={backgroundImageTablet.src} class="bg-image">
             <img src={backgroundImageDesktop.src} alt="" class="bg-image">
         </picture>
         <div class="horizontal-scrim invisible sm:visible"></div>
         <div class="vertical-scrim sm:invisible"></div>
-        <!--<div class="absolute top-0 max-w-screen-md left-0 px-4 py-16 sm:px-28 sm:py-32 w-full about-me-text">-->
-        <!--    <div class="">-->
-        <!--        <div class="text-7xl font-black mb-14 text-my-name">-->
-        <!--            Hi, I'm Miki Pokryvailo-->
-        <!--        </div>-->
-        <!--        <div class="mt-4 text-base sm:text-lg font-light">-->
-        <!--            I’m a software engineer based in NYC. I mainly work on backend/infra, and I’m happiest when working on early-stage, ambiguous problems. I like figuring things out.-->
-        <!--            <br /><br />-->
-        <!--            I was the first engineer at Nile, worked at Madhive, and Confluent.-->
-        <!--            <br /><br />-->
-        <!--            Outside of work, I’m a home-renowned chef, I work at a stealth startup 🥷, and blog about random stuff.-->
-        <!--            <br /><br />-->
-        <!--            You can reach me at "mpokryva" at "gmail" dot com.-->
-        <!--        </div>-->
-        <!--    </div>-->
-        <!--</div>-->
+        <div class="absolute top-0 max-w-screen-md left-0 px-4 py-16 sm:px-28 sm:py-32 w-full about-me-text">
+            <div class="">
+                <div class="text-7xl font-black mb-14 text-my-name">
+                    Hi, I'm Miki Pokryvailo
+                </div>
+                <div class="mt-4 text-base sm:text-lg font-light">
+                    I’m a software engineer based in NYC. I mainly work on backend/infra, and I’m happiest when working on early-stage, ambiguous problems. I like figuring things out.
+                    <br /><br />
+                    I was the first engineer at Nile, worked at Madhive, and Confluent.
+                    <br /><br />
+                    Outside of work, I’m a home-renowned chef, I work at a stealth startup 🥷, and blog about random stuff.
+                    <br /><br />
+                    You can reach me at "mpokryva" at "gmail" dot com.
+                </div>
+            </div>
+        </div>
         <!--<div class="relative mr-5 mb-5 flex space-x-4">-->
         <!--    <a href="https://linkedin.com/in/miki-pokryvailo/" target="_blank" class="rounded-md clickable-image">-->
         <!--        <Image class="max-w-10 max-h-10" src={linkedInLogo} alt="linkedin logo"></Image>-->
@@ -57,11 +55,6 @@ TODO:
 </Layout>
 
 <style>
-    html, body {
-        height: 100%;
-        margin: 0;
-        overflow: auto;
-    }
     body {
         //font-family: 'Lora', serif;
         font-family: 'Merriweather', serif;
@@ -140,20 +133,10 @@ TODO:
         background-repeat: no-repeat;
     }
 
-    @media screen and (orientation: landscape), screen and (min-width: 640px) {
-        .background-image {
-            background-image: url('../assets/background-desktop.png');
-        }
-    }
-
-    @media screen and (orientation: portrait) {
-        .background-image {
-            background-image: url('../assets/background-mobile.png');
-        }
-    }
     .bg-image {
         width: 100%;
         height: 100%;
+        min-height: 100vh;
         object-fit: cover; /* Ensures the image covers the entire container */
         object-position: center; /* Center the image */
     }
