@@ -1,8 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
-import backgroundImage from '../assets/background2.png';
-import backgroundImageMobile from '../assets/3-bigger-5.png'
+import backgroundImageDesktop from '../assets/background-desktop.png';
+import backgroundImageMobile from '../assets/background-mobile.png'
+import backgroundImageTablet from '../assets/background-tablet.png'
 import linkedInLogo from '../assets/linkedin-logo.png';
 import githubLogo from '../assets/github-logo.svg';
 ---
@@ -21,10 +22,19 @@ TODO:
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <Layout title="Welcome to Astro.">
     <div class="relative w-screen container image-container">
-        <img src={backgroundImage.src}
-             sizes="(min-width: 1920px), 100vw"
-             srcset={`${backgroundImageMobile.src} 1133w, ${backgroundImage.src} 1792w`}
-             alt="background of me" class="bg-cover w-full object-cover bg-image" />
+        <!--<img src={backgroundImageMobile.src}-->
+        <!--     sizes="(max-width: 480px) 698px, (min-width: 640px) 1792px, 698px"-->
+        <!--     srcset={`${backgroundImageMobile.src} 698w, ${backgroundImage.src} 1792w`}-->
+        <!--     alt="background of me" class="bg-cover w-full object-cover bg-image" />-->
+        <!--<img src={backgroundImageMobile.src}-->
+        <!--     srcset={-->
+        <!--       `${backgroundImageMobile.src} 698w, -->
+        <!--        ${backgroundImageDesktop.src} 1792w-->
+        <!--        `-->
+        <!--     }-->
+        <!--     sizes="(orientation: portrait) 270px, (orientation: landscape) 1792px"-->
+        <!--     alt="background of me" class="bg-image object-cover" />-->
+        <div class="background-image"/>
         <div class="horizontal-scrim invisible sm:visible"></div>
         <div class="vertical-scrim sm:invisible"></div>
         <div class="absolute top-0 max-w-screen-md left-0 px-4 py-16 sm:px-28 sm:py-32 w-full about-me-text">
@@ -43,7 +53,7 @@ TODO:
                 </div>
             </div>
         </div>
-        <div class="absolute bottom-0 right-0 mr-5 mb-5 flex space-x-4">
+        <div class="relative mr-5 mb-5 flex space-x-4">
             <a href="https://linkedin.com/in/miki-pokryvailo/" target="_blank" class="rounded-md clickable-image">
                 <Image class="max-w-10 max-h-10" src={linkedInLogo} alt="linkedin logo"></Image>
             </a>
@@ -121,4 +131,27 @@ TODO:
         max-width: 100%
     }
 
+
+    .background-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;;
+        background-position: top;
+        background-repeat: no-repeat;
+    }
+
+    @media screen and (orientation: landscape) {
+        .background-image {
+            background-image: url('../assets/background-desktop.png');
+        }
+    }
+
+    @media screen and (orientation: portrait) {
+        .background-image {
+            background-image: url('../assets/background-mobile.png');
+        }
+    }
 </style>
