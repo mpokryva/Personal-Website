@@ -14,6 +14,30 @@ import githubLogo from '../assets/github-logo.svg'
   href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
   rel="stylesheet"
 />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&display=swap"
+  rel="stylesheet"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Hepta+Slab:wght@1..900&display=swap"
+  rel="stylesheet"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Hepta+Slab:wght@1..900&family=Montagu+Slab:opsz,wght@16..144,100..700&display=swap"
+  rel="stylesheet"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Figtree:ital,wght@0,300..900;1,300..900&family=Hepta+Slab:wght@1..900&family=Montagu+Slab:opsz,wght@16..144,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap"
+  rel="stylesheet"
+/>
 <Layout title="Welcome to Astro.">
   <div class="image-container">
     <picture class="">
@@ -30,11 +54,11 @@ import githubLogo from '../assets/github-logo.svg'
     <div
       class="absolute top-0 max-w-screen-md left-0 px-4 py-16 sm:px-28 sm:py-32 w-full about-me-text"
     >
-      <div class="">
-        <div class="text-7xl font-black mb-14 text-my-name">
+      <div class="about-me tracking-wide">
+        <div class="text-7xl mb-14 font-bold about-me-title">
           Hi, I'm Miki Pokryvailo
         </div>
-        <div class="mt-4 text-base sm:text-lg font-light">
+        <div class="mt-4 text-base sm:text-lg about-me-body sm:leading-relaxed">
           I’m a software engineer based in NYC. I mainly work on backend/infra,
           and I’m happiest when working on early-stage, ambiguous problems. I
           like figuring things out.
@@ -71,20 +95,27 @@ import githubLogo from '../assets/github-logo.svg'
   </div>
 </Layout>
 
+<!-- TODO: Extract this into TW classes -->
 <style>
   body {
-    font-family: 'Merriweather', serif;
     -webkit-font-smoothing: antialiased;
-    color: #fff8c2;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Soft shadow for readability */
-    color: #fff;
-    //-webkit-text-stroke: 2px black;
-    //paint-order: stroke fill;
     text-rendering: optimizeLegibility;
+    color: #fff;
   }
 
-  .text-my-name {
-    font-family: 'Lato', sans-serif;
+  .about-me-body {
+    font-family: 'Merriweather', serif;
+    font-family: 'Hepta Slab', serif;
+    font-weight: 300;
+    font-weight: 400;
+    //color: #fff285;
+    //-webkit-text-stroke: 2px black;
+    //paint-order: stroke fill;
+  }
+
+  .about-me-title {
+    font-family: 'Montserrat', sans-serif;
   }
 
   .image-container {
@@ -103,7 +134,7 @@ import githubLogo from '../assets/github-logo.svg'
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0));
     pointer-events: none; /* Allows clicks to pass through to the image if needed */
   }
 
@@ -133,10 +164,6 @@ import githubLogo from '../assets/github-logo.svg'
       0.3
     ); /* Light gray background with slight transparency */
     display: inline-block;
-  }
-
-  .about-me-text {
-    //letter-spacing: 0.5px; /* Slight letter spacing for readability */
   }
 
   .container {
