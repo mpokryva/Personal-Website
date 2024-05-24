@@ -1,143 +1,153 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
-import backgroundImageDesktop from '../assets/background-desktop.png';
+import Layout from '../layouts/Layout.astro'
+import { Image } from 'astro:assets'
+import backgroundImageDesktop from '../assets/background-desktop.png'
 import backgroundImageMobile from '../assets/background-mobile-upscaled.png'
 import backgroundImageTablet from '../assets/background-tablet.png'
-import linkedInLogo from '../assets/linkedin-logo.png';
-import githubLogo from '../assets/github-logo.svg';
+import linkedInLogo from '../assets/linkedin-logo.png'
+import githubLogo from '../assets/github-logo.svg'
 ---
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!--
-TODO:
-* Clean up fonts
-* Optimize image
-* Get rid of tiny bit of scroll
-* Get image working on all media types
-  * iPhone SE
-* Nail down actual content
--->
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+  rel="stylesheet"
+/>
 <Layout title="Welcome to Astro.">
-        <picture class="">
-            <source media="(max-width: 480px)" srcset={backgroundImageMobile.src}>
-            <source media="(min-width: 601px) and (max-width: 1024px)" srcset={backgroundImageTablet.src} class="bg-image">
-            <img src={backgroundImageDesktop.src} alt="" class="bg-image">
-        </picture>
-        <div class="horizontal-scrim invisible sm:visible"></div>
-        <div class="vertical-scrim sm:invisible"></div>
-        <div class="absolute top-0 max-w-screen-md left-0 px-4 py-16 sm:px-28 sm:py-32 w-full about-me-text">
-            <div class="">
-                <div class="text-7xl font-black mb-14 text-my-name">
-                    Hi, I'm Miki Pokryvailo
-                </div>
-                <div class="mt-4 text-base sm:text-lg font-light">
-                    I’m a software engineer based in NYC. I mainly work on backend/infra, and I’m happiest when working on early-stage, ambiguous problems. I like figuring things out.
-                    <br /><br />
-                    I was the first engineer at Nile, worked at Madhive, and Confluent.
-                    <br /><br />
-                    Outside of work, I’m a home-renowned chef, I work at a stealth startup 🥷, and blog about random stuff.
-                    <br /><br />
-                    You can reach me at "mpokryva" at "gmail" dot com.
-                </div>
-            </div>
+  <div class="image-container">
+    <picture class="">
+      <source media="(max-width: 480px)" srcset={backgroundImageMobile.src} />
+      <source
+        media="(min-width: 601px) and (max-width: 1024px)"
+        srcset={backgroundImageTablet.src}
+        class="bg-image"
+      />
+      <img src={backgroundImageDesktop.src} alt="" class="bg-image" />
+    </picture>
+    <div class="horizontal-scrim invisible sm:visible"></div>
+    <div class="vertical-scrim sm:invisible"></div>
+    <div
+      class="absolute top-0 max-w-screen-md left-0 px-4 py-16 sm:px-28 sm:py-32 w-full about-me-text"
+    >
+      <div class="">
+        <div class="text-7xl font-black mb-14 text-my-name">
+          Hi, I'm Miki Pokryvailo
         </div>
-        <!--<div class="relative mr-5 mb-5 flex space-x-4">-->
-        <!--    <a href="https://linkedin.com/in/miki-pokryvailo/" target="_blank" class="rounded-md clickable-image">-->
-        <!--        <Image class="max-w-10 max-h-10" src={linkedInLogo} alt="linkedin logo"></Image>-->
-        <!--    </a>-->
-        <!--    <a href="https://github.com/mpokryva" target="_blank" class="rounded-full clickable-image">-->
-        <!--        <Image class="max-w-10 max-h-10" src={githubLogo} alt="linkedin logo"></Image>-->
-        <!--    </a>-->
-        <!--</div>-->
+        <div class="mt-4 text-base sm:text-lg font-light">
+          I’m a software engineer based in NYC. I mainly work on backend/infra,
+          and I’m happiest when working on early-stage, ambiguous problems. I
+          like figuring things out.
+          <br /><br />
+          I was the first engineer at Nile, worked at Madhive, and Confluent.
+          <br /><br />
+          Outside of work, I’m a home-renowned chef, I work at a stealth startup
+          🥷, and blog about random stuff.
+          <br /><br />
+          You can reach me at "mpokryva" at "gmail" dot com.
+        </div>
+      </div>
+    </div>
+    <!--<div class="relative mr-5 mb-5 flex space-x-4">-->
+    <!--    <a href="https://linkedin.com/in/miki-pokryvailo/" target="_blank" class="rounded-md clickable-image">-->
+    <!--        <Image class="max-w-10 max-h-10" src={linkedInLogo} alt="linkedin logo"></Image>-->
+    <!--    </a>-->
+    <!--    <a href="https://github.com/mpokryva" target="_blank" class="rounded-full clickable-image">-->
+    <!--        <Image class="max-w-10 max-h-10" src={githubLogo} alt="linkedin logo"></Image>-->
+    <!--    </a>-->
+    <!--</div>-->
+  </div>
 </Layout>
 
 <style>
-    body {
-        //font-family: 'Lora', serif;
-        font-family: 'Merriweather', serif;
-        -webkit-font-smoothing: antialiased;
-        color: #ffe500;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Soft shadow for readability */
-        color: #fff;
-        //-webkit-text-stroke: 1px black;
-        //paint-order: stroke fill;
-        text-rendering: optimizeLegibility;
-    }
+  body {
+    font-family: 'Merriweather', serif;
+    -webkit-font-smoothing: antialiased;
+    color: #fff8c2;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Soft shadow for readability */
+    color: #fff;
+    //-webkit-text-stroke: 2px black;
+    //paint-order: stroke fill;
+    text-rendering: optimizeLegibility;
+  }
 
-    .text-my-name {
-        font-family: 'Lato', sans-serif;
-    }
+  .text-my-name {
+    font-family: 'Lato', sans-serif;
+  }
 
-    .image-container {
-        position: relative;
-        display: inline-block; /* Adjust according to your layout */
-    }
+  .image-container {
+    position: relative;
+    display: inline-block; /* Adjust according to your layout */
+  }
 
-    .image-container img {
-        display: block;
-        width: 100%; /* Adjust according to your needs */
-        height: 100%; /* Adjust according to your needs */
-    }
+  .image-container img {
+    display: block;
+    width: 100%; /* Adjust according to your needs */
+    height: 100%; /* Adjust according to your needs */
+  }
 
-    .image-container .horizontal-scrim {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to right, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0));
-        pointer-events: none; /* Allows clicks to pass through to the image if needed */
-    }
+  .image-container .horizontal-scrim {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+    pointer-events: none; /* Allows clicks to pass through to the image if needed */
+  }
 
-    .image-container .vertical-scrim {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to bottom, rgba(0, 0, 0, .15), rgba(0, 0, 0, 0));
-        pointer-events: none; /* Allows clicks to pass through to the image if needed */
-    }
+  .image-container .vertical-scrim {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0)
+    );
+    pointer-events: none; /* Allows clicks to pass through to the image if needed */
+  }
 
+  a.clickable-image {
+    padding: 5px; /* Padding to ensure background is visible */
+  }
 
-    a.clickable-image {
-        padding: 5px; /* Padding to ensure background is visible */
-    }
+  a.clickable-image:hover {
+    background-color: rgba(
+      211,
+      211,
+      211,
+      0.3
+    ); /* Light gray background with slight transparency */
+    display: inline-block;
+  }
 
-    a.clickable-image:hover {
-        background-color: rgba(211, 211, 211, 0.3); /* Light gray background with slight transparency */
-        display: inline-block;
-    }
+  .about-me-text {
+    //letter-spacing: 0.5px; /* Slight letter spacing for readability */
+  }
 
-    .about-me-text {
-        //letter-spacing: 0.5px; /* Slight letter spacing for readability */
-    }
+  .container {
+    max-width: 100%;
+  }
 
+  .background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
-    .container {
-        max-width: 100%
-    }
-
-
-    .background-image {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-
-    .bg-image {
-        width: 100%;
-        height: 100%;
-        min-height: 100vh;
-        object-fit: cover; /* Ensures the image covers the entire container */
-        object-position: center; /* Center the image */
-    }
+  .bg-image {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    object-fit: cover; /* Ensures the image covers the entire container */
+    object-position: center; /* Center the image */
+  }
 </style>
