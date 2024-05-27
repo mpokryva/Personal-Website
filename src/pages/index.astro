@@ -69,7 +69,7 @@ import githubLogo from '../assets/github-logo.svg'
   rel="stylesheet"
 />
 <Layout title="Welcome to Astro.">
-  <div class="image-container">
+  <div class="image-container selection:bg-amber-400">
     <picture class="">
       <source media="(max-width: 480px)" srcset={backgroundImageMobile.src} />
       <source
@@ -82,32 +82,33 @@ import githubLogo from '../assets/github-logo.svg'
     <div class="horizontal-scrim invisible xl:visible"></div>
     <div class="vertical-scrim xl:invisible"></div>
     <div
-      class="absolute top-0 max-w-screen-md left-0
+      class="absolute top-0 left-0
       w-full about-me-container
       px-4 sm:px-28
-      pt-24 sm:pt-28
+      pt-24 sm:pt-40
       sm:h-auto
       tracking-wide contain-content break-words"
     >
       <div
-        class="text-5xl sm:text-6xl mb-9 sm:mb-14 about-me-title leading-tight sm:leading-tight"
+        class="text-5xl sm:text-6xl mb-7 sm:mb-8 about-me-title leading-tight sm:leading-tight max-w-screen-lg"
       >
         Hi, I'm Miki Pokryvailo
       </div>
-      <div class="mt-4 text-base sm:text-lg about-me-body leading-relaxed">
+      <div
+        class="mt-4 text-base sm:text-lg about-me-body leading-relaxed max-w-screen-sm"
+      >
         I’m a software engineer based in NYC, focused on backend/infra and
-        product. I love early stage startups and problems — I’m often the person
-        unafraid to pursue and ship the weird idea that proves to be the best
-        solution.
+        product. I love early stage problems and startups, where I’m often the
+        person that finds and ships the weird (but good!) ideas.
         <br />
         <br />
         Most recently, I was the first hire at <a
           href="https://thenile.dev"
           target="_blank">Nile</a
-        >. I built large chunks of our initial product, and when we pivoted to a
+        >. I built a lot of our initial product, and when we pivoted to a
         tenant-aware database, I built our SQL parsing framework, helped define
         the SDK experience, wrote an <a
-          href="https://https://news.ycombinator.com/item?id=32241820"
+          href="https://news.ycombinator.com/item?id=32241820"
           target="_blank">HN-viral blog</a
         > about row-level security, and more.
         <br />
@@ -118,7 +119,12 @@ import githubLogo from '../assets/github-logo.svg'
         Outside of work, I’m a home-renowned chef 👨‍🍳 and salsa dancer 💃.
       </div>
     </div>
-    <div class="absolute bottom-0 right-0 flex space-x-4 mr-5 mb-5">
+    <div
+      class="absolute bottom-0 right-0 flex space-x-4 mr-5 mb-5 items-center"
+    >
+      <div class="text-lg h-full rounded-md p-1 my-email">
+        mpokryva@gmail.com
+      </div>
       <a
         href="https://linkedin.com/in/miki-pokryvailo/"
         target="_blank"
@@ -147,29 +153,26 @@ import githubLogo from '../assets/github-logo.svg'
     -webkit-font-smoothing: antialiased;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Soft shadow for readability */
     text-rendering: optimizeLegibility;
-    color: #fff;
-  }
-
-  @media (max-width: 480px) {
-    .about-me-container {
-      //height: 53%;
-    }
-  }
-
-  .about-me-body {
     font-family: 'Hepta Slab', serif;
-    font-weight: 400;
-    //color: #fff285;
-    //-webkit-text-stroke: 1.5px black;
-    //paint-order: stroke fill;
+    color: #fff;
   }
 
   .about-me-title {
     /* Uncomment one font at a time to experiment */
     font-weight: 830;
+    //color: #fff285;
     font-family: 'bitter', serif;
     //font-family: 'Work Sans', sans-serif;
-    //font-family: 'Mulish', serif;
+  }
+
+  .my-email {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    padding: 6px;
+    text-align: center; /* Center text */
+    mix-blend-mode: screen; /* This makes the cutout text possible */
+    text-shadow: none;
   }
 
   .image-container {
@@ -204,8 +207,8 @@ import githubLogo from '../assets/github-logo.svg'
     height: 100%;
     background: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.4)
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.3)
     );
     pointer-events: none; /* Allows clicks to pass through to the image if needed */
   }
