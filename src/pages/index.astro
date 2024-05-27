@@ -62,6 +62,12 @@ import githubLogo from '../assets/github-logo.svg'
   href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap"
   rel="stylesheet"
 />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+  rel="stylesheet"
+/>
 <Layout title="Welcome to Astro.">
   <div class="image-container">
     <picture class="">
@@ -83,20 +89,33 @@ import githubLogo from '../assets/github-logo.svg'
       sm:h-auto
       tracking-wide contain-content break-words"
     >
-      <div class="text-5xl sm:text-7xl mb-9 sm:mb-14 about-me-title">
+      <div
+        class="text-5xl sm:text-6xl mb-9 sm:mb-14 about-me-title leading-tight sm:leading-tight"
+      >
         Hi, I'm Miki Pokryvailo
       </div>
-      <div class="mt-4 text-base sm:text-lg about-me-body sm:leading-relaxed">
-        I’m a software engineer based in NYC. I mainly work on backend/infra,
-        and I’m happiest when working on early-stage, ambiguous problems. I like
-        figuring things out.
-        <br /><br />
-        I was the first engineer at Nile, worked at Madhive, and Confluent.
-        <br /><br />
-        Outside of work, I’m a home-renowned chef, I work at a stealth startup 🥷,
-        and blog about random stuff.
-        <br /><br />
-        You can reach me at "mpokryva" at "gmail" dot com.
+      <div class="mt-4 text-base sm:text-lg about-me-body leading-relaxed">
+        I’m a software engineer based in NYC, focused on backend/infra and
+        product. I love early stage startups and problems — I’m often the person
+        unafraid to pursue and ship the weird idea that proves to be the best
+        solution.
+        <br />
+        <br />
+        Most recently, I was the first hire at <a
+          href="https://thenile.dev"
+          target="_blank">Nile</a
+        >. I built large chunks of our initial product, and when we pivoted to a
+        tenant-aware database, I built our SQL parsing framework, helped define
+        the SDK experience, wrote an <a
+          href="https://https://news.ycombinator.com/item?id=32241820"
+          target="_blank">HN-viral blog</a
+        > about row-level security, and more.
+        <br />
+        <br />
+        Before Nile, I worked at Confluent and MadHive on API infra.
+        <br />
+        <br />
+        Outside of work, I’m a home-renowned chef 👨‍🍳 and salsa dancer 💃.
       </div>
     </div>
     <div class="absolute bottom-0 right-0 flex space-x-4 mr-5 mb-5">
@@ -126,32 +145,31 @@ import githubLogo from '../assets/github-logo.svg'
 <style>
   body {
     -webkit-font-smoothing: antialiased;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Soft shadow for readability */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Soft shadow for readability */
     text-rendering: optimizeLegibility;
     color: #fff;
   }
 
   @media (max-width: 480px) {
     .about-me-container {
-      height: 53%;
+      //height: 53%;
     }
   }
 
   .about-me-body {
     font-family: 'Hepta Slab', serif;
-    font-weight: 300;
-    font-weight: 430;
+    font-weight: 400;
     //color: #fff285;
-    //-webkit-text-stroke: 2px black;
+    //-webkit-text-stroke: 1.5px black;
     //paint-order: stroke fill;
   }
 
   .about-me-title {
     /* Uncomment one font at a time to experiment */
     font-weight: 830;
-    font-family: 'Work Sans', sans-serif;
     font-family: 'bitter', serif;
-    //font-family: 'Montserrat', serif;
+    //font-family: 'Work Sans', sans-serif;
+    //font-family: 'Mulish', serif;
   }
 
   .image-container {
@@ -186,8 +204,8 @@ import githubLogo from '../assets/github-logo.svg'
     height: 100%;
     background: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.15),
-      rgba(0, 0, 0, 0)
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.4)
     );
     pointer-events: none; /* Allows clicks to pass through to the image if needed */
   }
