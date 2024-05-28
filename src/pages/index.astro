@@ -6,6 +6,7 @@ import backgroundImageMobile from '../assets/background-mobile-upscaled.png'
 import backgroundImageTablet from '../assets/background-tablet.png'
 import linkedInLogo from '../assets/linkedin-logo.png'
 import githubLogo from '../assets/github-logo.svg'
+import Social from '../components/Social.astro'
 ---
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -117,32 +118,14 @@ import githubLogo from '../assets/github-logo.svg'
         <br />
         <br />
         Outside of work, I’m a home-renowned chef 👨‍🍳 and salsa dancer 💃.
+        <br />
+        <br />
+        You can reach me at
+        <a href="mailto:mpokryva@gmail.com"> mpokryva@gmail.com</a>.
       </div>
     </div>
-    <div
-      class="absolute bottom-0 right-0 flex space-x-4 mr-5 mb-5 items-center"
-    >
-      <div class="text-lg h-full rounded-md p-1 my-email">
-        mpokryva@gmail.com
-      </div>
-      <a
-        href="https://linkedin.com/in/miki-pokryvailo/"
-        target="_blank"
-        class="rounded-md clickable-image"
-      >
-        <Image
-          class="max-w-10 max-h-10"
-          src={linkedInLogo}
-          alt="linkedin logo"
-        />
-      </a>
-      <a
-        href="https://github.com/mpokryva"
-        target="_blank"
-        class="rounded-full clickable-image"
-      >
-        <Image class="max-w-10 max-h-10" src={githubLogo} alt="linkedin logo" />
-      </a>
+    <div class="absolute bottom-0 right-0">
+      <Social />
     </div>
   </div>
 </Layout>
@@ -163,16 +146,6 @@ import githubLogo from '../assets/github-logo.svg'
     //color: #fff285;
     font-family: 'bitter', serif;
     //font-family: 'Work Sans', sans-serif;
-  }
-
-  .my-email {
-    background-color: white;
-    color: black;
-    font-weight: bold;
-    padding: 6px;
-    text-align: center; /* Center text */
-    mix-blend-mode: screen; /* This makes the cutout text possible */
-    text-shadow: none;
   }
 
   .image-container {
@@ -213,6 +186,12 @@ import githubLogo from '../assets/github-logo.svg'
     pointer-events: none; /* Allows clicks to pass through to the image if needed */
   }
 
+  a {
+    color: #fcd34d;
+    color: #fbbf24;
+    font-weight: 500;
+    //color: #fb923c;
+  }
   a.clickable-image {
     padding: 5px; /* Padding to ensure background is visible */
   }
