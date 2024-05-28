@@ -1,11 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import { Image } from 'astro:assets'
 import backgroundImageDesktop from '../assets/background-desktop.png'
 import backgroundImageMobile from '../assets/background-mobile-upscaled.png'
 import backgroundImageTablet from '../assets/background-tablet.png'
-import linkedInLogo from '../assets/linkedin-logo.png'
-import githubLogo from '../assets/github-logo.svg'
 import Social from '../components/Social.astro'
 ---
 
@@ -96,13 +93,24 @@ import Social from '../components/Social.astro'
         Hi, I'm Miki Pokryvailo
       </div>
       <div
-        class="mt-4 text-base sm:text-lg about-me-body leading-relaxed max-w-screen-sm"
+        class="mt-4 text-base sm:text-lg about-me-heading leading-relaxed max-w-screen-sm"
       >
         I’m a software engineer based in NYC, focused on backend/infra and
         product. I love early stage problems and startups, where I’m often the
         person that finds and ships the weird (but good!) ideas.
-        <br />
-        <br />
+      </div>
+    </div>
+    <!--<div class="absolute bottom-0 right-0 invisible sm:visible">-->
+    <!--  &lt;!&ndash; TODO: Maybe invisible on tablet? &ndash;&gt;-->
+    <!--  <Social />-->
+    <!--</div>-->
+  </div>
+  <div class="about-me-body bg-white text-black no-text-shadow">
+    <div class="py-6 px-6 about-me-main-content">
+      <div class="text-xl font-bold">A bit more about me</div>
+      <div
+        class="mt-4 text-base sm:text-lg about-me-body leading-relaxed max-w-screen-sm"
+      >
         Most recently, I was the first hire at <a
           href="https://thenile.dev"
           target="_blank">Nile</a
@@ -124,7 +132,7 @@ import Social from '../components/Social.astro'
         <a href="mailto:mpokryva@gmail.com"> mpokryva@gmail.com</a>.
       </div>
     </div>
-    <div class="absolute bottom-0 right-0">
+    <div class="social-logos flex justify-end">
       <Social />
     </div>
   </div>
@@ -138,6 +146,10 @@ import Social from '../components/Social.astro'
     text-rendering: optimizeLegibility;
     font-family: 'Hepta Slab', serif;
     color: #fff;
+  }
+
+  .no-text-shadow {
+    text-shadow: none;
   }
 
   .about-me-title {
@@ -172,6 +184,10 @@ import Social from '../components/Social.astro'
     pointer-events: none; /* Allows clicks to pass through to the image if needed */
   }
 
+  .social-logos {
+    fill: black;
+  }
+
   .image-container .vertical-scrim {
     position: absolute;
     top: 0;
@@ -186,24 +202,13 @@ import Social from '../components/Social.astro'
     pointer-events: none; /* Allows clicks to pass through to the image if needed */
   }
 
-  a {
-    color: #fcd34d;
-    color: #fbbf24;
-    font-weight: 500;
-    //color: #fb923c;
-  }
-  a.clickable-image {
-    padding: 5px; /* Padding to ensure background is visible */
+  :root {
+    --primary-color: #ff6933;
   }
 
-  a.clickable-image:hover {
-    background-color: rgba(
-      211,
-      211,
-      211,
-      0.3
-    ); /* Light gray background with slight transparency */
-    display: inline-block;
+  a {
+    color: var(--primary-color);
+    font-weight: 600;
   }
 
   .container {

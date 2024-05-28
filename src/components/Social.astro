@@ -1,0 +1,45 @@
+---
+import { Image } from 'astro:assets'
+import linkedInLogo from '../assets/linkedin-logo.svg?raw'
+import githubLogo from '../assets/github-logo.svg?raw'
+---
+
+<div class="flex space-x-4 items-center">
+  <div class>
+    <a
+      href="https://linkedin.com/in/miki-pokryvailo/"
+      target="_blank"
+      class="rounded-md clickable-image"
+    >
+      <Fragment set:html={linkedInLogo} />
+    </a>
+  </div>
+  <div>
+    <a
+      href="https://github.com/mpokryva"
+      target="_blank"
+      class="rounded-full clickable-image"
+    >
+      <Fragment set:html={githubLogo} />
+    </a>
+  </div>
+</div>
+<style>
+  a.clickable-image:hover {
+    background-color: rgba(
+      211,
+      211,
+      211,
+      0.3
+    ); /* Light gray background with slight transparency */
+    display: inline-block;
+  }
+  a.clickable-image {
+    padding: 5px; /* Padding to ensure background is visible */
+    svg {
+      fill: black;
+      height: 32px;
+      width: 32px;
+    }
+  }
+</style>
