@@ -67,7 +67,7 @@ import Social from '../components/Social.astro'
   rel="stylesheet"
 />
 <Layout title="Welcome to Astro.">
-  <div class="image-container selection:bg-amber-400">
+  <div class="image-container">
     <picture class="">
       <source media="(max-width: 480px)" srcset={backgroundImageMobile.src} />
       <source
@@ -82,35 +82,29 @@ import Social from '../components/Social.astro'
     <div
       class="absolute top-0 left-0
       w-full about-me-container
-      px-4 sm:px-28
-      pt-24 sm:pt-40
+      px-6 sm:px-32
+      pt-24 sm:pt-72
       sm:h-auto
       tracking-wide contain-content break-words"
     >
       <div
-        class="text-5xl sm:text-6xl mb-7 sm:mb-8 about-me-title leading-tight sm:leading-tight max-w-screen-lg"
+        class="text-5xl sm:text-6xl pb-6 about-me-title leading-tight sm:leading-tight max-w-screen-lg"
       >
         Hi, I'm Miki Pokryvailo
       </div>
       <div
-        class="mt-4 text-base sm:text-lg about-me-heading leading-relaxed max-w-screen-sm"
+        class="text-lg sm:text-xl about-me-heading sm:leading-relaxed max-w-screen-sm"
       >
         I’m a software engineer based in NYC, focused on backend/infra and
         product. I love early stage problems and startups, where I’m often the
         person that finds and ships the weird (but good!) ideas.
       </div>
     </div>
-    <!--<div class="absolute bottom-0 right-0 invisible sm:visible">-->
-    <!--  &lt;!&ndash; TODO: Maybe invisible on tablet? &ndash;&gt;-->
-    <!--  <Social />-->
-    <!--</div>-->
   </div>
   <div class="about-me-body bg-white text-black no-text-shadow">
-    <div class="py-6 px-6 about-me-main-content">
-      <div class="text-xl font-bold">A bit more about me</div>
-      <div
-        class="mt-4 text-base sm:text-lg about-me-body leading-relaxed max-w-screen-sm"
-      >
+    <div class="py-12 px-6 sm:px-32 about-me-main-content">
+      <div class="text-3xl sm:text-4xl font-bold">More about me</div>
+      <div class="my-8 text-lg about-me-body leading-relaxed max-w-screen-sm">
         Most recently, I was the first hire at <a
           href="https://thenile.dev"
           target="_blank">Nile</a
@@ -196,8 +190,8 @@ import Social from '../components/Social.astro'
     height: 100%;
     background: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.25),
-      rgba(0, 0, 0, 0.3)
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0)
     );
     pointer-events: none; /* Allows clicks to pass through to the image if needed */
   }
@@ -209,7 +203,7 @@ import Social from '../components/Social.astro'
   a {
     color: var(--primary-color);
     font-weight: 600;
-      text-decoration: underline;
+    text-decoration: underline;
   }
 
   .container {
