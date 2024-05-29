@@ -83,7 +83,6 @@ import Social from '../components/Social.astro'
       class="absolute top-0 left-0
       w-full about-me-container
       px-6 sm:px-32
-      pt-24 sm:pt-72
       sm:h-auto
       tracking-wide contain-content break-words"
     >
@@ -235,8 +234,21 @@ import Social from '../components/Social.astro'
   }
 
   .bg-image {
-    min-height: 105vh;
+    min-height: 110vh;
     object-fit: cover; /* Ensures the image covers the entire container */
     object-position: center; /* Center the image */
   }
+
+  .about-me-container {
+    padding-left: 5vw;
+    padding-top: 15vh;
+  }
+
+  @media (min-width: 640px) {
+    .about-me-container {
+      padding-left: 10vw;
+      padding-top: 25vh;
+    }
+  }
+
 </style>
