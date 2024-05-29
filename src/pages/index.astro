@@ -104,7 +104,7 @@ import Social from '../components/Social.astro'
   <div class="about-me-body bg-white text-black no-text-shadow py-6">
     <div class="py-10 px-6 sm:px-32 about-me-main-content">
       <div class="text-3xl sm:text-4xl font-bold">More about me</div>
-      <div class="my-8 text-lg about-me-body leading-loose max-w-screen-lg">
+      <div class="my-8 text-base sm:text-lg about-me-body leading-loose sm:leading-loose max-w-screen-lg">
         Most recently, I was the first hire at <a
           href="https://thenile.dev"
           target="_blank">Nile</a
@@ -209,6 +209,9 @@ import Social from '../components/Social.astro'
   a {
     color: var(--primary-color);
     font-weight: 600;
+  }
+
+  a:hover {
     text-decoration: underline;
   }
 
