@@ -1,11 +1,10 @@
 ---
-import { Image } from 'astro:assets'
 import linkedInLogo from '../assets/linkedin-logo.svg?raw'
 import githubLogo from '../assets/github-logo.svg?raw'
 ---
 
 <div class="flex space-x-4 items-center">
-  <div class>
+  <div>
     <a
       href="https://linkedin.com/in/miki-pokryvailo/"
       target="_blank"
@@ -24,22 +23,32 @@ import githubLogo from '../assets/github-logo.svg?raw'
     </a>
   </div>
 </div>
+
 <style>
-  a.clickable-image:hover {
-    background-color: rgba(
-      211,
-      211,
-      211,
-      0.3
-    ); /* Light gray background with slight transparency */
-    display: inline-block;
-  }
   a.clickable-image {
+    display: inline-block;
     padding: 5px; /* Padding to ensure background is visible */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+
+  a.clickable-image {
     svg {
       fill: black;
       height: 32px;
       width: 32px;
     }
+  }
+
+  a.clickable-image:hover {
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.1
+    ); /* Light gray background with slight transparency */
+  }
+
+  a.clickable-image:hover svg {
+    fill: #000000; /* Ensure fill color remains consistent on hover */
   }
 </style>
