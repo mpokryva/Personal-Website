@@ -1,8 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import backgroundImageDesktop from '../assets/background-desktop.png'
-import backgroundImageMobile from '../assets/background-mobile-upscaled-short.png'
-import backgroundImageTablet from '../assets/background-tablet.png'
+import backgroundImageDesktop from '../assets/background-desktop.webp'
+import backgroundImageMobile from '../assets/background-mobile.webp'
+import backgroundImageTablet from '../assets/background-tablet.webp'
 import Social from '../components/Social.astro'
 ---
 
@@ -31,7 +31,7 @@ import Social from '../components/Social.astro'
       px-6 pt-24
       about-me-container
       sm:h-auto
-      tracking-wide contain-content break-words"
+      tracking-wide contain-content"
     >
       <div
         class="text-5xl sm:text-6xl pb-8 about-me-title leading-tight sm:leading-tight max-w-screen-lg"
@@ -39,10 +39,10 @@ import Social from '../components/Social.astro'
         Hi, I'm Miki Pokryvailo
       </div>
       <div
-        class="text-lg sm:text-xl about-me-heading sm:leading-loose max-w-screen-sm"
+        class="text-lg sm:text-xl sm:leading-loose max-w-screen-sm"
       >
-        I’m a software engineer based in NYC, focused on backend/infra and
-        product. I love early stage problems and startups, where I’m often the
+        I'm a software engineer based in NYC, focused on backend/infra and
+        product. I love early stage problems and startups, where I'm often the
         person that finds and ships the weird ideas.
       </div>
     </div>
@@ -69,7 +69,7 @@ import Social from '../components/Social.astro'
         Before Nile, I worked at Confluent and MadHive on API infra.
         <br />
         <br />
-        Outside of work, I’m a home-renowned chef 👨‍🍳 and salsa dancer 💃.
+        Outside of work, I'm a home-renowned chef 👨‍🍳 and salsa dancer 💃.
         <br />
         <br />
         You can reach me at
@@ -82,7 +82,6 @@ import Social from '../components/Social.astro'
   </div>
 </Layout>
 
-<!-- TODO: Extract this into TW classes -->
 <style>
   body {
     -webkit-font-smoothing: antialiased;
