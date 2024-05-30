@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config'
+import compress from "astro-compress";
 
 import tailwind from '@astrojs/tailwind'
 
@@ -7,7 +8,7 @@ export default defineConfig({
     devToolbar: {
         enabled: false
     },
-    integrations: [tailwind()],
+    integrations: [tailwind(), compress()],
     server: {
         host: '0.0.0.0',
         port: 4321,

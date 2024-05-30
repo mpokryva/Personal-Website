@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import backgroundImageDesktop from '../assets/background-desktop.webp'
-import backgroundImageMobile from '../assets/background-mobile-p90.webp'
+import backgroundImageMobile from '../assets/background-mobile.webp'
 import backgroundImageTablet from '../assets/background-tablet.webp'
 import Social from '../components/Social.astro'
 ---
@@ -15,7 +15,11 @@ import Social from '../components/Social.astro'
         srcset={backgroundImageTablet.src}
         class="bg-image"
       />
-      <img src={backgroundImageDesktop.src} alt="" class="bg-image" />
+      <img
+        src={backgroundImageDesktop.src}
+        alt="Man sitting on ledge"
+        class="bg-image"
+      />
     </picture>
     <div class="horizontal-scrim invisible xl:visible"></div>
     <div class="vertical-scrim xl:invisible"></div>
