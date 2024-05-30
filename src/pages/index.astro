@@ -1,17 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import backgroundImageDesktop from '../assets/background-desktop.webp'
-import backgroundImageMobile from '../assets/background-mobile.webp'
+import backgroundImageMobile from '../assets/background-mobile-p90.webp'
 import backgroundImageTablet from '../assets/background-tablet.webp'
 import Social from '../components/Social.astro'
 ---
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Hepta+Slab:wght@1..900&display=swap"
-  rel="stylesheet"
-/>
 <Layout title="Welcome to Astro.">
   <div class="image-container">
     <picture class="">
@@ -34,13 +28,11 @@ import Social from '../components/Social.astro'
       tracking-wide contain-content"
     >
       <div
-        class="text-5xl sm:text-6xl pb-8 about-me-title leading-tight sm:leading-tight max-w-screen-lg"
+        class="text-5xl sm:text-6xl pb-8 font-display font-extrabold leading-tight sm:leading-tight max-w-screen-lg"
       >
         Hi, I'm Miki Pokryvailo
       </div>
-      <div
-        class="text-lg sm:text-xl sm:leading-loose max-w-screen-sm"
-      >
+      <div class="text-lg sm:text-xl sm:leading-loose max-w-screen-sm">
         I'm a software engineer based in NYC, focused on backend/infra and
         product. I love early stage problems and startups, where I'm often the
         person that finds and ships the weird ideas.
@@ -51,7 +43,9 @@ import Social from '../components/Social.astro'
     class="about-me-body flex flex-col items-start bg-white text-black no-text-shadow py-6 sm:pb-6 pb-10"
   >
     <div class="py-10 px-6 sm:px-32 about-me-main-content">
-      <div class="text-3xl sm:text-4xl font-bold">More about me</div>
+      <div class="text-3xl sm:text-4xl font-display font-bold">
+        More about me
+      </div>
       <div
         class="my-8 text-base sm:text-lg about-me-body leading-loose sm:leading-loose max-w-screen-sm"
       >
@@ -101,19 +95,8 @@ import Social from '../components/Social.astro'
     text-shadow: none;
   }
 
-  .about-me-title {
-    font-weight: 830;
-    font-family: 'Bitter', serif;
-  }
-
   .image-container {
     position: relative;
-  }
-
-  .image-container img {
-    display: block;
-    width: 100%; /* Adjust according to your needs */
-    height: 100%; /* Adjust according to your needs */
   }
 
   .image-container .horizontal-scrim {
