@@ -1,0 +1,54 @@
+---
+import linkedInLogo from '../assets/linkedin-logo.svg?raw'
+import githubLogo from '../assets/github-logo.svg?raw'
+---
+
+<div class="flex space-x-4 items-center">
+  <div>
+    <a
+      href="https://linkedin.com/in/miki-pokryvailo/"
+      target="_blank"
+      class="rounded-md clickable-image"
+    >
+      <Fragment set:html={linkedInLogo} />
+    </a>
+  </div>
+  <div>
+    <a
+      href="https://github.com/mpokryva"
+      target="_blank"
+      class="rounded-full clickable-image"
+    >
+      <Fragment set:html={githubLogo} />
+    </a>
+  </div>
+</div>
+
+<style>
+  a.clickable-image {
+    display: inline-block;
+    padding: 0.375rem; /* Padding to ensure background is visible */
+    transition: background-color 0.2s ease; /* Smooth transition for background color */
+  }
+
+  a.clickable-image {
+    svg {
+      fill: black;
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+  }
+
+  a.clickable-image:hover {
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.1
+    ); /* Light gray background with slight transparency */
+  }
+
+  a.clickable-image:hover svg {
+    fill: #000000; /* Ensure fill color remains consistent on hover */
+  }
+</style>
