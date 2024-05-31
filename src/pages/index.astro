@@ -37,9 +37,13 @@ import Social from '../components/Social.astro'
         Hi, I'm Miki Pokryvailo
       </div>
       <div class="text-lg sm:text-xl sm:leading-loose max-w-screen-sm">
-        I'm a software engineer based in NYC, focused on backend/infra and
-        product. I love early stage problems and startups, where I'm often the
-        person that finds and ships the weird ideas.
+        I’m a software engineer based in NYC. I love early stage startups and
+        problems — I’m often the person unafraid to pursue the weird idea that
+        becomes a 10x improvement, and grind on the details until it’s shipped.
+        I did this most recently as the first hire at <a
+          href="https://thenile.dev"
+          target="_blank">Nile</a
+        >.
       </div>
     </div>
   </div>
@@ -53,18 +57,19 @@ import Social from '../components/Social.astro'
       <div
         class="my-8 text-base sm:text-lg about-me-body leading-loose sm:leading-loose max-w-screen-sm"
       >
-        Most recently, I was the first hire at <a
-          href="https://thenile.dev"
-          target="_blank">Nile</a
-        >. I built a lot of our initial product, and when we pivoted to a
-        tenant-aware database, I built our SQL parsing framework, helped define
-        the SDK experience, wrote an <a
+        At Nile, I built a lot of our initial product, introduced row-level
+        security and wrote an <a
           href="https://news.ycombinator.com/item?id=32241820"
           target="_blank">HN-viral blog</a
-        > about row-level security, and more.
+        > about it, and when we pivoted to a tenant-aware database, I built our SQL
+        parsing framework, helped define the SDK experience, made CI go fast, and
+        more.
         <br />
         <br />
-        Before Nile, I worked at Confluent and MadHive on API infra.
+        Before Nile, I worked at <a href="https://confluent.io" target="_blank"
+          >Confluent</a
+        > and <a href="https://madhive.com" target="_blank">MadHive</a> on API infra.
+
         <br />
         <br />
         Outside of work, I'm a home-renowned chef 👨‍🍳 and salsa dancer 💃.
@@ -93,6 +98,7 @@ import Social from '../components/Social.astro'
   & *::selection {
     background-color: var(--accent-color);
     color: black;
+    text-shadow: none;
   }
 
   .no-text-shadow {
@@ -140,7 +146,6 @@ import Social from '../components/Social.astro'
   }
 
   a {
-    color: black;
     font-weight: 500;
     text-decoration: underline;
     text-decoration-color: var(--accent-color);
