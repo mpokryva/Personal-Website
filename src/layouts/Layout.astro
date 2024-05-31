@@ -2,7 +2,7 @@
 interface Props {
   title: string
 }
-import Image from "astro:assets";
+import favicon from '../assets/favicon.webp'
 
 const { title } = Astro.props
 ---
@@ -13,7 +13,7 @@ const { title } = Astro.props
     <meta charset="UTF-8" />
     <meta name="description" content="Miki Pokryvailo's personal website" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/webp" href="/favicon.webp" />
+    <link rel="icon" type="image/webp" href={favicon.src} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
