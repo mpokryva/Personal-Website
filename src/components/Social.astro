@@ -8,7 +8,7 @@ import githubLogo from '../assets/github-logo.svg?raw'
     <a
       href="https://linkedin.com/in/miki-pokryvailo/"
       target="_blank"
-      class="rounded-md clickable-image"
+      class="rounded-md social-icon"
     >
       <Fragment set:html={linkedInLogo} />
     </a>
@@ -17,7 +17,7 @@ import githubLogo from '../assets/github-logo.svg?raw'
     <a
       href="https://github.com/mpokryva"
       target="_blank"
-      class="rounded-full clickable-image"
+      class="rounded-full social-icon"
     >
       <Fragment set:html={githubLogo} />
     </a>
@@ -25,13 +25,13 @@ import githubLogo from '../assets/github-logo.svg?raw'
 </div>
 
 <style>
-  a.clickable-image {
+  .social-icon {
     display: inline-block;
     padding: 0.375rem; /* Padding to ensure background is visible */
     transition: background-color 0.2s ease; /* Smooth transition for background color */
   }
 
-  a.clickable-image {
+  .social-icon {
     svg {
       fill: black;
       height: 2.5rem;
@@ -39,16 +39,12 @@ import githubLogo from '../assets/github-logo.svg?raw'
     }
   }
 
-  a.clickable-image:hover {
+  .social-icon:hover {
     background-color: rgba(
       0,
       0,
       0,
       0.1
     ); /* Light gray background with slight transparency */
-  }
-
-  a.clickable-image:hover svg {
-    fill: #000000; /* Ensure fill color remains consistent on hover */
   }
 </style>
