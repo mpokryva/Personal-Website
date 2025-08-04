@@ -36,24 +36,27 @@ export default function Home() {
           tracking-wide contain-content sm:pl-[5vw] sm:pt-[16vh] text-black"
         >
           <div className="backdrop-blur-[3px] p-8 max-w-2xl">
-            <div
-              className="text-5xl sm:text-6xl pb-8 font-display font-extrabold leading-tight sm:leading-tight max-w-screen-l"
-              // style={{ textShadow: '2px 2px 5px rgba(0, 0, 0, 0.3)' }}
-            >
+            <div className="text-5xl sm:text-6xl pb-8 font-display font-extrabold leading-tight sm:leading-tight max-w-screen-l">
               Hi, I'm Miki Pokryvailo
             </div>
-            <div
-              className="text-lg sm:text-xl sm:leading-loose max-w-screen-sm font-medium"
-              // style={{ textShadow: '2px 2px 5px rgba(0, 0, 0, 0.3)' }}
-            >
-              I'm a software engineer based in NYC, focused on backend and
-              product. I love early stage startups and problems — I'm often the
-              person unafraid to hack on and ship the weird idea that becomes a
-              10x improvement. Most recently, I did this as the first hire at{' '}
+            <div className="text-lg sm:text-xl sm:leading-loose max-w-screen-sm font-medium">
+              I'm a software engineer based in SF, focused on backend and
+              product at{' '}
+              <a
+                href="https://yutori.com"
+                target="_blank"
+                className="styled-link"
+                rel="noopener noreferrer"
+              >
+                Yutori
+              </a>
+              . I'm often the person unafraid to
+              hack on and ship the weird idea that becomes a 10x improvement.
+              Most recently, I did this as the first hire at{' '}
               <a
                 href="https://thenile.dev"
                 target="_blank"
-                className="font-medium underline decoration-yellow-200 decoration-2 hover:decoration-yellow-400"
+                className="styled-link"
                 rel="noopener noreferrer"
               >
                 Nile
@@ -74,14 +77,14 @@ export default function Home() {
             <a
               href="https://news.ycombinator.com/item?id=32241820"
               target="_blank"
-              className="font-medium underline decoration-yellow-200 decoration-2 hover:decoration-yellow-400"
+              className="styled-link"
               rel="noopener noreferrer"
             >
               HN-viral
             </a>{' '}
             <a
               href="https://www.thenile.dev/blog/app/blog/row-level-security"
-              className="font-medium underline decoration-yellow-200 decoration-2 hover:decoration-yellow-400"
+              className="styled-link"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -96,7 +99,7 @@ export default function Home() {
             <a
               href="https://confluent.io"
               target="_blank"
-              className="font-medium underline decoration-yellow-200 decoration-2 hover:decoration-yellow-400"
+              className="styled-link"
               rel="noopener noreferrer"
             >
               Confluent
@@ -105,7 +108,7 @@ export default function Home() {
             <a
               href="https://madhive.com"
               target="_blank"
-              className="font-medium underline decoration-yellow-200 decoration-2 hover:decoration-yellow-400"
+              className="styled-link"
               rel="noopener noreferrer"
             >
               MadHive
@@ -119,7 +122,7 @@ export default function Home() {
             You can reach me at
             <a
               href="mailto:mpokryva@gmail.com"
-              className="font-medium underline decoration-yellow-200 decoration-2 hover:decoration-yellow-400"
+              className="styled-link"
             >
               {' '}
               mpokryva@gmail.com
