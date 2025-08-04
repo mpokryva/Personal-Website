@@ -2,23 +2,26 @@
   "name": "personal-website",
   "type": "module",
   "version": "0.0.1",
+  "packageManager": "pnpm@9.10.0",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write .",
+    "prepare": "husky"
   },
   "dependencies": {
-    "@astrojs/check": "^0.6.0",
-    "@astrojs/tailwind": "^5.1.0",
-    "astro": "^4.8.3",
-    "astro-compress": "^2.2.26",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "next": "^15.4.5",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.5"
   },
   "devDependencies": {
-    "prettier": "3.2.5",
-    "prettier-plugin-astro": "^0.13.0"
+    "husky": "^9.1.7",
+    "prettier": "3.2.5"
   }
 }
