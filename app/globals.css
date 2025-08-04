@@ -32,14 +32,3 @@ body {
 .font-display {
   font-family: 'Bitter', serif;
 }
-
-.styled-link {
-  font-weight: 500;
-  text-decoration: underline;
-  text-decoration-color: rgb(253 224 71);
-  text-decoration-thickness: 2px;
-}
-
-.styled-link:hover {
-  text-decoration-color: rgb(250 204 21);
-}

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Social from '@/components/Social'
+import StyledLink from '@/components/StyledLink'
 import backgroundImage from '@/public/bg-new.png'
 import backgroundImageMobile from '@/public/bg-new-mobile.png'
 import backgroundImageTablet from '@/public/bg-new-tablet.png'
@@ -42,25 +43,23 @@ export default function Home() {
             <div className="text-lg sm:text-xl sm:leading-loose max-w-screen-sm font-medium">
               I'm a software engineer based in SF, focused on backend and
               product at{' '}
-              <a
+              <StyledLink
                 href="https://yutori.com"
                 target="_blank"
-                className="styled-link"
                 rel="noopener noreferrer"
               >
                 Yutori
-              </a>
-              . I'm often the person unafraid to
-              hack on and ship the weird idea that becomes a 10x improvement.
-              Most recently, I did this as the first hire at{' '}
-              <a
+              </StyledLink>
+              . I'm often the person unafraid to hack on and ship the weird idea
+              that becomes a 10x improvement. Most recently, I did this as the
+              first hire at{' '}
+              <StyledLink
                 href="https://thenile.dev"
                 target="_blank"
-                className="styled-link"
                 rel="noopener noreferrer"
               >
                 Nile
-              </a>
+              </StyledLink>
               .
             </div>
           </div>
@@ -74,45 +73,41 @@ export default function Home() {
           <div className="my-8 text-base sm:text-lg about-me-body leading-loose sm:leading-loose max-w-screen-sm">
             At Nile, I built a lot of our initial product, introduced row-level
             security and wrote an{' '}
-            <a
+            <StyledLink
               href="https://news.ycombinator.com/item?id=32241820"
               target="_blank"
-              className="styled-link"
               rel="noopener noreferrer"
             >
               HN-viral
-            </a>{' '}
-            <a
+            </StyledLink>{' '}
+            <StyledLink
               href="https://www.thenile.dev/blog/app/blog/row-level-security"
-              className="styled-link"
               target="_blank"
               rel="noopener noreferrer"
             >
               blog
-            </a>{' '}
+            </StyledLink>{' '}
             about it. When we pivoted to a tenant-aware database, I built our
             SQL parsing framework, worked on the Rust database sync engine,
             helped define the SDK experience, made CI go fast, and more.
             <br />
             <br />
             Before Nile, I worked at{' '}
-            <a
+            <StyledLink
               href="https://confluent.io"
               target="_blank"
-              className="styled-link"
               rel="noopener noreferrer"
             >
               Confluent
-            </a>{' '}
+            </StyledLink>{' '}
             and{' '}
-            <a
+            <StyledLink
               href="https://madhive.com"
               target="_blank"
-              className="styled-link"
               rel="noopener noreferrer"
             >
               MadHive
-            </a>{' '}
+            </StyledLink>{' '}
             on API infra.
             <br />
             <br />
@@ -120,13 +115,10 @@ export default function Home() {
             <br />
             <br />
             You can reach me at
-            <a
-              href="mailto:mpokryva@gmail.com"
-              className="styled-link"
-            >
+            <StyledLink href="mailto:mpokryva@gmail.com">
               {' '}
               mpokryva@gmail.com
-            </a>
+            </StyledLink>
             .
           </div>
         </div>
