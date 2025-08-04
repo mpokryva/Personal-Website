@@ -51,16 +51,7 @@ export default function Home() {
                 Yutori
               </StyledLink>
               . I'm often the person unafraid to hack on and ship the weird idea
-              that becomes a 10x improvement. Most recently, I did this as the
-              first hire at{' '}
-              <StyledLink
-                href="https://thenile.dev"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Nile
-              </StyledLink>
-              .
+              that becomes a 10x improvement.
             </div>
           </div>
         </div>
@@ -71,8 +62,30 @@ export default function Home() {
             More about me
           </div>
           <div className="my-8 text-base sm:text-lg about-me-body leading-loose sm:leading-loose max-w-screen-sm">
-            At Nile, I built a lot of our initial product, introduced row-level
-            security and wrote an{' '}
+            I'm the first product hire at Yutori. I built much of the{' '}
+            <StyledLink
+              href="https://scouts.yutori.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              product
+            </StyledLink>
+            {' '}backend including durable workflows, user-facing APIs, and some more
+            experimental agentic stuff I can't talk about yet :&#41; I also
+            solo full-stack'ed the early demos and initial data collection
+            tooling.
+            <br />
+            <br />
+            Previously, I was the first hire at{' '}
+            <StyledLink
+              href="https://www.thenile.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Nile
+            </StyledLink>
+            , where I developed our
+            initial product, introduced row-level security and wrote an{' '}
             <StyledLink
               href="https://news.ycombinator.com/item?id=32241820"
               target="_blank"
@@ -92,9 +105,9 @@ export default function Home() {
             helped define the SDK experience, made CI go fast, and more.
             <br />
             <br />
-            Before Nile, I worked at{' '}
+            Before Nile, I worked on API infra at{' '}
             <StyledLink
-              href="https://confluent.io"
+              href="https://www.confluent.io/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -102,13 +115,13 @@ export default function Home() {
             </StyledLink>{' '}
             and{' '}
             <StyledLink
-              href="https://madhive.com"
+              href="https://www.madhive.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              MadHive
-            </StyledLink>{' '}
-            on API infra.
+              Madhive
+            </StyledLink>
+            .
             <br />
             <br />
             Outside of work, I'm a home-renowned chef 👨‍🍳 and salsa dancer 💃.
