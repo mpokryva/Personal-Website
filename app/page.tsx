@@ -69,11 +69,10 @@ export default function Home() {
               rel="noopener noreferrer"
             >
               product
-            </StyledLink>
-            {' '}backend including durable workflows, user-facing APIs, and some more
-            experimental agentic stuff I can't talk about yet :&#41; I also
-            solo full-stack'ed the early demos and initial data collection
-            tooling.
+            </StyledLink>{' '}
+            backend including durable workflows, user-facing APIs, and some more
+            experimental agentic stuff I can't talk about yet :&#41; I also solo
+            full-stack'ed the early demos and initial data collection tooling.
             <br />
             <br />
             Previously, I was the first hire at{' '}
@@ -84,8 +83,8 @@ export default function Home() {
             >
               Nile
             </StyledLink>
-            , where I developed our
-            initial product, introduced row-level security and wrote an{' '}
+            , where I developed our initial product, introduced row-level
+            security and wrote an{' '}
             <StyledLink
               href="https://news.ycombinator.com/item?id=32241820"
               target="_blank"
