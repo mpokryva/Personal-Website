@@ -62,8 +62,8 @@ export default function Home() {
             More about me
           </div>
           <div className="my-8 text-base sm:text-lg about-me-body leading-loose sm:leading-loose max-w-screen-sm">
-            I'm the second hire at Yutori, and the first product hire. I built
-            much of the{' '}
+            I'm the second hire at Yutori, and the first product hire. I've
+            built much of the{' '}
             <StyledLink
               href="https://scouts.yutori.com/"
               target="_blank"
