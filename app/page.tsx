@@ -36,7 +36,7 @@ export default function Home() {
           sm:h-auto sm:min-h-0 sm:justify-start
           tracking-wide contain-content sm:pl-[5vw] sm:pt-[16vh] text-black"
         >
-          <div className="backdrop-blur-[3px] p-8 max-w-2xl">
+          <div className="backdrop-blur-gradient p-8 max-w-2xl">
             <div className="text-5xl sm:text-6xl pb-8 font-display font-extrabold leading-tight sm:leading-tight max-w-screen-l">
               Hi, I'm Miki Pokryvailo
             </div>
