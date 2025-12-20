@@ -28,6 +28,7 @@ export default function Home() {
         </picture>
         <div className="horizontal-scrim invisible xl:visible absolute top-0 left-0 w-full h-full pointer-events-none"></div>
         <div className="vertical-scrim xl:invisible absolute top-0 left-0 w-full h-full pointer-events-none"></div>
+        <div className="absolute -bottom-1 left-0 w-full h-[30%] bg-gradient-to-b from-transparent to-white pointer-events-none" />
         <div
           className="absolute top-0 left-0
           w-full
@@ -62,7 +63,7 @@ export default function Home() {
             More about me
           </div>
           <div className="my-8 text-base sm:text-lg about-me-body leading-loose sm:leading-loose max-w-screen-sm">
-            I'm the second hire at Yutori, and the first product hire. I've
+            I'm the first product hire at Yutori, and the second hire overall. I've
             built much of the{' '}
             <StyledLink
               href="https://scouts.yutori.com/"
@@ -71,8 +72,7 @@ export default function Home() {
             >
               product
             </StyledLink>{' '}
-            backend including durable workflows, user-facing APIs, and some more
-            experimental agentic stuff I can't talk about yet :&#41; I also solo
+            backend including durable workflows, user-facing APIs, and our onboarding (which I really like). I also solo
             full-stack'ed the early demos and initial data collection tooling.
             <br />
             <br />
@@ -83,26 +83,18 @@ export default function Home() {
               rel="noopener noreferrer"
             >
               Nile
-            </StyledLink>
-            , where I developed our initial product, introduced row-level
-            security and wrote an{' '}
+            </StyledLink>. I worked on the initial product,
+            and when we pivoted to a tenant-aware database, I built our
+            SQL parsing framework, worked on the Rust database sync engine,
+            helped define the SDK experience, made CI go fast, and more.
+            I also wrote a{' '}
             <StyledLink
               href="https://news.ycombinator.com/item?id=32241820"
               target="_blank"
               rel="noopener noreferrer"
             >
-              HN-viral
-            </StyledLink>{' '}
-            <StyledLink
-              href="https://www.thenile.dev/blog/app/blog/row-level-security"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              blog
-            </StyledLink>{' '}
-            about it. When we pivoted to a tenant-aware database, I built our
-            SQL parsing framework, worked on the Rust database sync engine,
-            helped define the SDK experience, made CI go fast, and more.
+              popular blog post
+            </StyledLink> about Postgres row-level security.
             <br />
             <br />
             Before Nile, I worked on API infra at{' '}
