@@ -71,8 +71,8 @@ export default function Home() {
               >
                 Yutori
               </StyledLink>
-              . I'm often the person unafraid to hack on and ship the weird
-              idea that becomes a 10x improvement.
+              . I'm often the person unafraid to hack on and ship the weird idea
+              that becomes a 10x improvement.
             </div>
           </div>
         </div>
@@ -91,8 +91,8 @@ export default function Home() {
           </h2>
           <div className="mt-10 space-y-6 text-base leading-[1.7] sm:text-[1.0625rem]">
             <p>
-              I'm the first product hire at Yutori, and the second hire
-              overall. I've built much of the{' '}
+              I'm the first product hire at Yutori, and the second hire overall.
+              I've built much of the{' '}
               <StyledLink
                 href="https://scouts.yutori.com/"
                 target="_blank"
@@ -114,8 +114,8 @@ export default function Home() {
                 Nile
               </StyledLink>
               . I worked on the initial product, and when we pivoted to a
-              tenant-aware database, I built our SQL parsing framework,
-              worked on the Rust database sync engine, helped define the SDK
+              tenant-aware database, I built our SQL parsing framework, worked
+              on the Rust database sync engine, helped define the SDK
               experience, made CI go fast, and more. I also wrote a{' '}
               <StyledLink
                 href="https://news.ycombinator.com/item?id=32241820"
@@ -146,8 +146,7 @@ export default function Home() {
               .
             </p>
             <p>
-              Outside of work, I'm a home-renowned chef 👨‍🍳 and salsa
-              dancer 💃.
+              Outside of work, I'm a home-renowned chef 👨‍🍳 and salsa dancer 💃.
             </p>
           </div>
 
