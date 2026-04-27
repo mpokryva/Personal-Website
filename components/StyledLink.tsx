@@ -12,12 +12,7 @@ export default function StyledLink({
   rel,
 }: StyledLinkProps) {
   return (
-    <a
-      href={href}
-      target={target}
-      rel={rel}
-      className="font-medium underline decoration-yellow-300 decoration-2 hover:decoration-yellow-500"
-    >
+    <a href={href} target={target} rel={rel} className="editorial-link">
       {children}
     </a>
   )

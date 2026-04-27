@@ -1,6 +1,7 @@
 node_modules
 target
 dist
+out
 logs
 public
 .cache
@@ -8,5 +9,6 @@ public
 .DS_Store
 .idea
 .next
+tsconfig.tsbuildinfo
 yarn-error.log
 npm-debug.log
