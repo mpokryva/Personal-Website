@@ -29,10 +29,6 @@ body {
   fill: black;
 }
 
-.font-display {
-  font-family: 'Fraunces', serif;
-}
-
 .hero-title {
   font-size: clamp(3rem, 13vw, 4.45rem);
   line-height: 0.98;

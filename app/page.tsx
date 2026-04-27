@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <div className="image-container relative">
-        <picture aria-hidden="true">
+        <picture>
           <source
             media="(max-width: 639px)"
             srcSet={backgroundImageMobile.src}
@@ -21,6 +21,8 @@ export default function Home() {
           <img
             src={backgroundImage.src}
             alt=""
+            fetchPriority="high"
+            decoding="async"
             className="absolute inset-0 h-full min-h-screen w-full object-cover object-center"
           />
         </picture>
@@ -33,7 +35,7 @@ export default function Home() {
           px-4 pt-16
           min-h-[110vh] flex flex-col
           sm:h-auto sm:min-h-0 sm:justify-start
-          contain-content sm:pl-[5vw] sm:pt-[16vh] sm:px-2 text-black"
+          contain-content sm:pl-[5vw] sm:pt-[16vh] text-black"
         >
           <div
             className="max-w-[40rem] p-6 sm:p-8"
@@ -45,10 +47,7 @@ export default function Home() {
             <div className="hero-title pb-8 font-display font-semibold">
               Hi, I'm Miki Pokryvailo
             </div>
-            <div
-              className="hero-intro max-w-[30rem] font-normal sm:max-w-[38rem]"
-              style={{ fontFamily: '"DM Sans", system-ui, sans-serif' }}
-            >
+            <div className="hero-intro max-w-[30rem] font-normal sm:max-w-[38rem]">
               I'm a software engineer based in SF, focused on backend and
               product at{' '}
               <StyledLink
@@ -64,13 +63,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <section
-        className="bg-white"
-        style={{
-          color: HERO_COLOR,
-          fontFamily: '"DM Sans", system-ui, sans-serif',
-        }}
-      >
+      <section className="bg-white" style={{ color: HERO_COLOR }}>
         <div className="w-full max-w-[40rem] px-6 py-20 sm:py-28 sm:pl-[5vw] sm:pr-8">
           <Divider />
           <h2 className="mt-8 font-display font-medium text-[1.875rem] leading-[1.15] sm:text-[2.25rem]">
