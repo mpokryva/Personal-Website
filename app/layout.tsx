@@ -24,12 +24,12 @@ export default function RootLayout({
           crossOrigin=""
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700;800&family=Hepta+Slab:wght@400;500&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Serif+4:wght@400&display=swap"
+          href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap"
           rel="preload"
           as="style"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700;800&family=Hepta+Slab:wght@400;500&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Serif+4:wght@400&display=swap"
+          href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap"
           rel="stylesheet"
         />
       </head>

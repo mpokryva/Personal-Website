@@ -1,9 +1,7 @@
-import Image from 'next/image'
 import Social from '@/components/Social'
 import StyledLink from '@/components/StyledLink'
-import backgroundImage from '@/public/bg-new.png'
-import backgroundImageMobile from '@/public/bg-new-mobile.png'
-import backgroundImageTablet from '@/public/bg-new-tablet.png'
+import backgroundImage from '@/new-bg.png'
+import backgroundImageMobile from '@/new-bg-mobile.png'
 
 const HERO_COLOR = '#4A2410'
 
@@ -15,52 +13,41 @@ export default function Home() {
   return (
     <>
       <div className="image-container relative">
-        <picture>
+        <picture aria-hidden="true">
           <source
-            media="(max-width: 480px)"
+            media="(max-width: 639px)"
             srcSet={backgroundImageMobile.src}
           />
-          <source
-            media="(max-width: 1024px)"
-            srcSet={backgroundImageTablet.src}
-          />
-          <Image
-            src={backgroundImage}
-            alt="Background image"
-            className="bg-image min-h-screen object-cover object-center w-full blur-[1px]"
-            priority
-            fill
+          <img
+            src={backgroundImage.src}
+            alt=""
+            className="absolute inset-0 h-full min-h-screen w-full object-cover object-center"
           />
         </picture>
-        <div className="horizontal-scrim invisible xl:visible absolute top-0 left-0 w-full h-full pointer-events-none"></div>
-        <div className="vertical-scrim xl:invisible absolute top-0 left-0 w-full h-full pointer-events-none"></div>
-        <div className="absolute -bottom-1 left-0 w-full h-[30%] bg-gradient-to-b from-transparent to-white pointer-events-none" />
+        <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,rgba(255,229,176,0.34)_0%,rgba(255,229,176,0.18)_30%,rgba(255,229,176,0.04)_52%,rgba(255,229,176,0)_70%)] pointer-events-none sm:block" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,232,184,0.36)_0%,rgba(255,232,184,0.14)_38%,rgba(255,232,184,0)_64%)] pointer-events-none sm:hidden" />
+        <div className="absolute -bottom-1 left-0 hidden w-full h-[30%] bg-gradient-to-b from-transparent to-white pointer-events-none sm:block" />
         <div
           className="absolute top-0 left-0
           w-full
-          px-2 pt-16
+          px-4 pt-16
           min-h-[110vh] flex flex-col
           sm:h-auto sm:min-h-0 sm:justify-start
-          tracking-wide contain-content sm:pl-[5vw] sm:pt-[16vh] text-black"
+          contain-content sm:pl-[5vw] sm:pt-[16vh] sm:px-2 text-black"
         >
           <div
-            className="backdrop-blur-gradient max-w-[40rem] p-8"
-            style={{ color: HERO_COLOR }}
+            className="max-w-[40rem] p-6 sm:p-8"
+            style={{
+              color: HERO_COLOR,
+              textShadow: '0 1px 10px rgba(255, 226, 178, 0.42)',
+            }}
           >
-            <div
-              className="pb-8 font-semibold"
-              style={{
-                fontFamily: '"Fraunces", serif',
-                fontSize: '56px',
-                lineHeight: 1,
-                letterSpacing: '-0.01em',
-              }}
-            >
+            <div className="hero-title pb-8 font-display font-semibold">
               Hi, I'm Miki Pokryvailo
             </div>
             <div
-              className="max-w-[40rem] text-xl leading-[1.7]"
-              style={{ fontFamily: '"Source Serif 4", serif' }}
+              className="hero-intro max-w-[30rem] font-normal sm:max-w-[38rem]"
+              style={{ fontFamily: '"DM Sans", system-ui, sans-serif' }}
             >
               I'm a software engineer based in SF, focused on backend and
               product at{' '}
@@ -78,15 +65,15 @@ export default function Home() {
         </div>
       </div>
       <section
-        className="bg-white text-black"
-        style={{ fontFamily: '"Source Serif 4", serif' }}
+        className="bg-white"
+        style={{
+          color: HERO_COLOR,
+          fontFamily: '"DM Sans", system-ui, sans-serif',
+        }}
       >
         <div className="w-full max-w-[40rem] px-6 py-20 sm:py-28 sm:pl-[5vw] sm:pr-8">
           <Divider />
-          <h2
-            className="mt-8 font-medium tracking-[-0.01em] text-[1.875rem] leading-[1.15] sm:text-[2.25rem]"
-            style={{ fontFamily: '"Fraunces", serif' }}
-          >
+          <h2 className="mt-8 font-display font-medium text-[1.875rem] leading-[1.15] sm:text-[2.25rem]">
             More about me
           </h2>
           <div className="mt-10 space-y-6 text-base leading-[1.7] sm:text-[1.0625rem]">

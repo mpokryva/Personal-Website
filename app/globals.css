@@ -5,13 +5,13 @@
 body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-family: 'Hepta Slab', serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
   color: black;
   background-color: white;
 }
 
 *::selection {
-  background-color: #f9dd82;
+  background-color: #c9824b;
   color: black;
   text-shadow: none;
 }
@@ -30,42 +30,44 @@ body {
 }
 
 .font-display {
-  font-family: 'Bitter', serif;
+  font-family: 'Fraunces', serif;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 13vw, 4.45rem);
+  line-height: 0.98;
+}
+
+.hero-intro {
+  font-size: clamp(1.12rem, 4.35vw, 1.38rem);
+  line-height: 1.58;
+}
+
+@media (min-width: 640px) {
+  .hero-title {
+    font-size: 56px;
+    line-height: 1;
+  }
+
+  .hero-intro {
+    font-size: 1.25rem;
+    line-height: 1.65;
+  }
 }
 
 .editorial-link {
   text-decoration-line: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 4px;
-  text-decoration-color: color-mix(in srgb, currentColor 28%, transparent);
+  text-decoration-color: #c9824b;
   transition:
+    color 220ms ease,
     text-decoration-color 220ms ease,
     text-underline-offset 220ms ease;
 }
 
 .editorial-link:hover {
-  text-decoration-color: currentColor;
+  color: #8f4b25;
+  text-decoration-color: #8f4b25;
   text-underline-offset: 3px;
-}
-
-.backdrop-blur-gradient {
-  position: relative;
-}
-
-.backdrop-blur-gradient::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  backdrop-filter: blur(18px);
-  mask: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
-  -webkit-mask: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  pointer-events: none;
-  z-index: -1;
 }

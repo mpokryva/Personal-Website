@@ -6,7 +6,12 @@ export default {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        body: ['DM Sans', 'system-ui', 'sans-serif'],
+        display: ['Fraunces', 'serif'],
+      },
+    },
   },
   plugins: [],
 }
