@@ -5,6 +5,12 @@ import backgroundImage from '@/public/bg-new.png'
 import backgroundImageMobile from '@/public/bg-new-mobile.png'
 import backgroundImageTablet from '@/public/bg-new-tablet.png'
 
+const HERO_COLOR = '#4A2410'
+
+function Divider() {
+  return <div aria-hidden className="h-px w-10 bg-current opacity-30" />
+}
+
 export default function Home() {
   return (
     <>
@@ -37,11 +43,25 @@ export default function Home() {
           sm:h-auto sm:min-h-0 sm:justify-start
           tracking-wide contain-content sm:pl-[5vw] sm:pt-[16vh] text-black"
         >
-          <div className="backdrop-blur-gradient p-8 max-w-2xl">
-            <div className="text-5xl sm:text-6xl pb-8 font-display font-extrabold leading-tight sm:leading-tight max-w-screen-l">
+          <div
+            className="backdrop-blur-gradient max-w-[40rem] p-8"
+            style={{ color: HERO_COLOR }}
+          >
+            <div
+              className="pb-8 font-semibold"
+              style={{
+                fontFamily: '"Fraunces", serif',
+                fontSize: '56px',
+                lineHeight: 1,
+                letterSpacing: '-0.01em',
+              }}
+            >
               Hi, I'm Miki Pokryvailo
             </div>
-            <div className="text-lg sm:text-xl sm:leading-loose max-w-screen-sm font-medium">
+            <div
+              className="max-w-[40rem] text-xl leading-[1.7]"
+              style={{ fontFamily: '"Source Serif 4", serif' }}
+            >
               I'm a software engineer based in SF, focused on backend and
               product at{' '}
               <StyledLink
@@ -51,86 +71,104 @@ export default function Home() {
               >
                 Yutori
               </StyledLink>
-              . I'm often the person unafraid to hack on and ship the weird idea
-              that becomes a 10x improvement.
+              . I'm often the person unafraid to hack on and ship the weird
+              idea that becomes a 10x improvement.
             </div>
           </div>
         </div>
       </div>
-      <div className="about-me-body flex flex-col items-start bg-white text-black py-6 sm:pb-6 pb-10">
-        <div className="py-10 px-6 sm:px-32 about-me-main-content">
-          <div className="text-3xl sm:text-4xl font-display font-bold">
+      <section
+        className="bg-white text-black"
+        style={{ fontFamily: '"Source Serif 4", serif' }}
+      >
+        <div className="w-full max-w-[40rem] px-6 py-20 sm:py-28 sm:pl-[5vw] sm:pr-8">
+          <Divider />
+          <h2
+            className="mt-8 font-medium tracking-[-0.01em] text-[1.875rem] leading-[1.15] sm:text-[2.25rem]"
+            style={{ fontFamily: '"Fraunces", serif' }}
+          >
             More about me
+          </h2>
+          <div className="mt-10 space-y-6 text-base leading-[1.7] sm:text-[1.0625rem]">
+            <p>
+              I'm the first product hire at Yutori, and the second hire
+              overall. I've built much of the{' '}
+              <StyledLink
+                href="https://scouts.yutori.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                product
+              </StyledLink>{' '}
+              backend including durable workflows, user-facing APIs, and our
+              onboarding (which I really like). I also solo full-stack'ed the
+              early demos and initial data collection tooling.
+            </p>
+            <p>
+              Previously, I was the first employee at{' '}
+              <StyledLink
+                href="https://www.thenile.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Nile
+              </StyledLink>
+              . I worked on the initial product, and when we pivoted to a
+              tenant-aware database, I built our SQL parsing framework,
+              worked on the Rust database sync engine, helped define the SDK
+              experience, made CI go fast, and more. I also wrote a{' '}
+              <StyledLink
+                href="https://news.ycombinator.com/item?id=32241820"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                popular blog post
+              </StyledLink>{' '}
+              about Postgres row-level security.
+            </p>
+            <p>
+              Before Nile, I worked on API infra at{' '}
+              <StyledLink
+                href="https://www.confluent.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Confluent
+              </StyledLink>{' '}
+              and{' '}
+              <StyledLink
+                href="https://www.madhive.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Madhive
+              </StyledLink>
+              .
+            </p>
+            <p>
+              Outside of work, I'm a home-renowned chef 👨‍🍳 and salsa
+              dancer 💃.
+            </p>
           </div>
-          <div className="my-8 text-base sm:text-lg about-me-body leading-loose sm:leading-loose max-w-screen-sm">
-            I'm the first product hire at Yutori, and the second hire overall. I've
-            built much of the{' '}
-            <StyledLink
-              href="https://scouts.yutori.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              product
-            </StyledLink>{' '}
-            backend including durable workflows, user-facing APIs, and our onboarding (which I really like). I also solo
-            full-stack'ed the early demos and initial data collection tooling.
-            <br />
-            <br />
-            Previously, I was the first employee at{' '}
-            <StyledLink
-              href="https://www.thenile.dev/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Nile
-            </StyledLink>. I worked on the initial product,
-            and when we pivoted to a tenant-aware database, I built our
-            SQL parsing framework, worked on the Rust database sync engine,
-            helped define the SDK experience, made CI go fast, and more.
-            I also wrote a{' '}
-            <StyledLink
-              href="https://news.ycombinator.com/item?id=32241820"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              popular blog post
-            </StyledLink> about Postgres row-level security.
-            <br />
-            <br />
-            Before Nile, I worked on API infra at{' '}
-            <StyledLink
-              href="https://www.confluent.io/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Confluent
-            </StyledLink>{' '}
-            and{' '}
-            <StyledLink
-              href="https://www.madhive.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Madhive
-            </StyledLink>
-            .
-            <br />
-            <br />
-            Outside of work, I'm a home-renowned chef 👨‍🍳 and salsa dancer 💃.
-            <br />
-            <br />
-            You can reach me at
-            <StyledLink href="mailto:mpokryva@gmail.com">
-              {' '}
-              mpokryva@gmail.com
-            </StyledLink>
-            .
+
+          <div className="mt-16 sm:mt-20">
+            <Divider />
+            <div className="mt-6 text-[0.72rem] uppercase tracking-[0.22em] opacity-55">
+              Elsewhere
+            </div>
+            <p className="mt-5 text-base leading-[1.7] sm:text-[1.0625rem]">
+              You can reach me at{' '}
+              <StyledLink href="mailto:mpokryva@gmail.com">
+                mpokryva@gmail.com
+              </StyledLink>
+              .
+            </p>
+            <div className="mt-6">
+              <Social />
+            </div>
           </div>
         </div>
-      </div>
-      <div className="bg-white social-logos flex justify-center pb-8">
-        <Social />
-      </div>
+      </section>
     </>
   )
 }
