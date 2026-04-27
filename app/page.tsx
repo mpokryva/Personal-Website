@@ -28,7 +28,7 @@ export default function Home() {
         </picture>
         <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,rgba(255,229,176,0.34)_0%,rgba(255,229,176,0.18)_30%,rgba(255,229,176,0.04)_52%,rgba(255,229,176,0)_70%)] pointer-events-none sm:block" />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,232,184,0.36)_0%,rgba(255,232,184,0.14)_38%,rgba(255,232,184,0)_64%)] pointer-events-none sm:hidden" />
-        <div className="absolute -bottom-1 left-0 hidden w-full h-[30%] bg-gradient-to-b from-transparent to-white pointer-events-none sm:block" />
+        <div className="absolute -bottom-1 left-0 w-full h-[15%] bg-gradient-to-b from-transparent to-white pointer-events-none" />
         <div
           className="absolute top-0 left-0
           w-full
