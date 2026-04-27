@@ -3,7 +3,8 @@ target
 dist
 out
 logs
-public
+public/*
+!public/favicon.webp
 .cache
 .vscode
 .DS_Store
