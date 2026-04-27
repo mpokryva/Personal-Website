@@ -1,7 +1,6 @@
+import HeroTimeMachine from '@/components/HeroTimeMachine'
 import Social from '@/components/Social'
 import StyledLink from '@/components/StyledLink'
-import backgroundImage from '@/new-bg.png'
-import backgroundImageMobile from '@/new-bg-mobile.png'
 
 const HERO_COLOR = '#4A2410'
 
@@ -13,19 +12,7 @@ export default function Home() {
   return (
     <>
       <div className="image-container relative">
-        <picture>
-          <source
-            media="(max-width: 639px)"
-            srcSet={backgroundImageMobile.src}
-          />
-          <img
-            src={backgroundImage.src}
-            alt=""
-            fetchPriority="high"
-            decoding="async"
-            className="absolute inset-0 h-full min-h-screen w-full object-cover object-center"
-          />
-        </picture>
+        <HeroTimeMachine />
         <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,rgba(255,229,176,0.34)_0%,rgba(255,229,176,0.18)_30%,rgba(255,229,176,0.04)_52%,rgba(255,229,176,0)_70%)] pointer-events-none sm:block" />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,232,184,0.36)_0%,rgba(255,232,184,0.14)_38%,rgba(255,232,184,0)_64%)] pointer-events-none sm:hidden" />
         <div className="absolute -bottom-1 left-0 w-full h-[15%] bg-gradient-to-b from-transparent to-white pointer-events-none" />
