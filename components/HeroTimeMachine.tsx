@@ -64,11 +64,11 @@ export default function HeroTimeMachine() {
       </div>
       <button
         type="button"
-        aria-label={`Showing ${activeEra.date} model. Cycle hero background era.`}
+        aria-label={`Showing ${activeEra.date} version. Cycle hero background version.`}
         className="absolute right-4 top-4 z-30 flex min-h-11 items-center gap-2 rounded-full border border-[#4A2410]/20 bg-white/72 px-3.5 py-2 text-sm font-medium text-[#4A2410] shadow-sm backdrop-blur-md transition hover:bg-white/88 focus:outline-none focus:ring-2 focus:ring-[#4A2410]/45 sm:right-6 sm:top-6"
         onClick={showNextEra}
       >
-        <span aria-hidden>Model</span>
+        <span aria-hidden>Version</span>
         <span
           aria-live="polite"
           className="rounded-full bg-[#4A2410] px-2 py-0.5 text-xs text-white"
